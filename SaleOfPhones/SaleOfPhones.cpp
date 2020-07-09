@@ -78,12 +78,14 @@ void ask_for_save_to_file(Phone phone, int rpt)
 		case 1: 
 		{ 
 			save_to_file(phone, "text.txt");
+		
 			break;
 		}
 
 		case 2: 
 		{
 			rpt=1;
+			
 			break;
 		}
 	}
@@ -208,12 +210,14 @@ int main(void)
 						ask_for_save_to_file(phone, return_to_main_menu);
 					}
 				}
+				
 				break;
 			}
 
 			case 3: 
 			{ 
 				show_all_phones(vector_phones);
+				
 				break;
 			}
 
@@ -253,6 +257,7 @@ int main(void)
 						vector_phones[i].set_year(year);
 					}
 				}
+				
 				break;
 			}
 
@@ -268,6 +273,7 @@ int main(void)
 					if(brand==vector_phones[i].get_brand() && model==vector_phones[i].get_model()) { vector_phones.erase(vector_phones.begin()+i); }
 					else cout<<"Nope!"<<endl;
 				}
+				
 				break;
 			}
 
@@ -275,6 +281,7 @@ int main(void)
 			{
 				sort(vector_phones.begin(), vector_phones.end(), Phone::compare_brand);
 				show_all_phones(vector_phones);
+				
 				break;
 			}
 
@@ -282,6 +289,7 @@ int main(void)
 			{
 				sort(vector_phones.begin(), vector_phones.end(), Phone::compare_brand_year);
 				show_all_phones(vector_phones);
+				
 				break;
 			}
 
@@ -289,12 +297,14 @@ int main(void)
 			{
 				sort(vector_phones.begin(), vector_phones.end(), Phone::compare_brand_model_diagonal);
 				show_all_phones(vector_phones);
+				
 				break;
 			}
 
 			case 9: 
 			{
-				exit(0); 
+				exit(0);
+				
 				break; 
 			}
 		}
